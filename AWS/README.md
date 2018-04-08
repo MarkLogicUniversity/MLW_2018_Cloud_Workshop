@@ -35,20 +35,19 @@ Let's begin.
 2. In the top search bar, leave the dropdown at the default setting of **AMI & SaaS** then enter the search term `marklogic`.
 3. Click the Search icon or press the ENTER key to begin the search.
 4. In the results, click on **MarkLogic Developer 9**.
-
-![](screenshots/marketplace.png)
+  ![](screenshots/marketplace.png)
     
 5. Click the **Continue to Subscribe** button.
 6. Click the **Service Catalog** tab.
 7. Click the **Accept Software Terms** button.
-
-![](screenshots/acceptTerm.png)
+  ![](screenshots/acceptTerm.png)
 
 8. You've now subscribed to the MarkLogic AMI and can proceed to use a CloudFormation template to create your running instance.
 
 ## Launch your cluster using a CloudFormation tempate.
-1. Go to <https://developer.marklogic.com/products/cloud/aws> .
-2. Scroll down to the MarkLogic 9 AMIs section.
+
+1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
+![](screenshots/cloudformation.png)
 3. Click the **Launch Stack** button for the description of "Cluster Developer (Free, BYOL)". This will take you to the AWS console.
 4. Log into the AWS Console, if needed.
 5. The **Create Stack** of the CloudFormation Services page displays.
