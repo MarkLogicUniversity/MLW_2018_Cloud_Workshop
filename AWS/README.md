@@ -66,9 +66,10 @@ Let's begin.
 	* VolumeType - leave at the default.
 	* Zone1, Zone2, Zone3 - select 3 different Availability Zones
 9. Click the **Next** button.
-10. On the **Options** page, create a tag with name as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
+10. On the **Options** page, create a tag with key as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
 ![](screenshots/tagStack.png)
-11. On the **Review** page, scroll to the bottom and click the **Create** button.
+11. On the **Review** page, scroll to the bottom and check the box "I acknowledge that AWS CloudFormation might create IAM resources with custom names". This is to authorize CloudFormation to create IAM role based on the permissions specified in the template. Then click the **Create** button.
+![](screenshots/ackIAM.png)
 12. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
 13. After the stack is created, the page will refresh with the name of your completed stack.
 14. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
