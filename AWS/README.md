@@ -46,12 +46,11 @@ Let's begin.
 
 ## Launch your cluster using a CloudFormation tempate.
 
-1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
+1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
 ![](screenshots/cloudformation.png)
-3. Click the **Launch Stack** button for the description of "Cluster Developer (Free, BYOL)". This will take you to the AWS console.
-4. Log into the AWS Console, if needed.
-5. The **Create Stack** of the CloudFormation Services page displays.
-6. In the **Select Template** section, the radio button for the "Specify an Amazon S3 template URL" is selected and the CloudFormation template URL is already filled in.
+2. Click the **Create new stack** button.
+6. In the **Select Template** section, select the radio button "Upload a template to Amazon S3". Click the "Choose File" button and choose the template file `mlcluster-vpc.template` provided.
+![](screenshots/selectTemplate.png)
 7. Click the **Next** button.
 8. Fill in the following information.
 	* AdminPass - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
