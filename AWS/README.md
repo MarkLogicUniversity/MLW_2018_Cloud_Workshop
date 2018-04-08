@@ -36,12 +36,10 @@ Let's begin.
 3. Click the Search icon or press the ENTER key to begin the search.
 4. In the results, click on **MarkLogic Developer 9**.
   ![](screenshots/marketplace.png)
-    
 5. Click the **Continue to Subscribe** button.
 6. Click the **Service Catalog** tab.
 7. Click the **Accept Software Terms** button.
   ![](screenshots/acceptTerm.png)
-
 8. You've now subscribed to the MarkLogic AMI and can proceed to use a CloudFormation template to create your running instance.
 
 ## Launch your cluster using a CloudFormation tempate.
@@ -52,6 +50,7 @@ Let's begin.
 6. In the **Select Template** section, select the radio button "Upload a template to Amazon S3". Click the "Choose File" button and choose the template file `mlcluster-vpc.template` provided.
 ![](screenshots/selectTemplate.png)
 7. Click the **Next** button.
+![](screenshots/stackParameters.png)
 8. Fill in the following information.
 	* AdminPass - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
 	* AdminUser - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
@@ -67,7 +66,8 @@ Let's begin.
 	* VolumeType - leave at the default.
 	* Zone1, Zone2, Zone3 - select 3 different Availability Zones
 9. Click the **Next** button.
-10. On the **Options** page, leave all the defaults, scroll to the bottom and click the **Next** button.
+10. On the **Options** page, create a tag with name as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
+![](screenshots/tagStack.png)
 11. On the **Review** page, scroll to the bottom and click the **Create** button.
 12. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
 13. After the stack is created, the page will refresh with the name of your completed stack.
