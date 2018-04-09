@@ -42,7 +42,7 @@ Let's begin.
   ![](screenshots/acceptTerm.png)
 8. You've now subscribed to the MarkLogic AMI and can proceed to use a CloudFormation template to create your running instance.
 
-## Launch your cluster using a CloudFormation tempate.
+### Launch your cluster using a CloudFormation tempate.
 
 1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
 ![](screenshots/cloudformation.png)
@@ -66,9 +66,10 @@ Let's begin.
 	* VolumeType - leave at the default.
 	* Zone1, Zone2, Zone3 - select 3 different Availability Zones
 9. Click the **Next** button.
-10. On the **Options** page, create a tag with name as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
+10. On the **Options** page, create a tag with key as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
 ![](screenshots/tagStack.png)
-11. On the **Review** page, scroll to the bottom and click the **Create** button.
+11. On the **Review** page, scroll to the bottom and check the box "I acknowledge that AWS CloudFormation might create IAM resources with custom names". This is to authorize CloudFormation to create IAM role based on the permissions specified in the template. Then click the **Create** button.
+![](screenshots/ackIAM.png)
 12. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
 13. After the stack is created, the page will refresh with the name of your completed stack.
 14. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
