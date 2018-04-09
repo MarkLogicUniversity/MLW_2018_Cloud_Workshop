@@ -60,5 +60,6 @@ Let's begin.
 9. Click the "Instance Type" button to pop up the Instance Size Selector. Select a size for VM instance. For this exercise, we will use default value "3x Standard DS13 v2". Click "Select" button and "OK" button on the "Resource Configuration" page.
 ![](screenshots/sizeSelector.png)
 10. The summary of the cluster configuration will show. Click "OK" to confirm. If you want to modify some settings, click the corresponding tag on the left (Basics, MarkLogic Configuration, Resource Configuration) to go back.
+![](screenshots/summary.png)
 11. On the "Buy" page, scroll down to bottom and click "Create" to accept the terms and deploy the stack.
-	
+![](screenshots/create.png)
