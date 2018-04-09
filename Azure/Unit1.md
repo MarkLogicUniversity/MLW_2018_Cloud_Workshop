@@ -48,4 +48,17 @@ Let's begin.
 	* Licensee - 'none'. MarkLogic licensee if you already have one. For this excercise, we will use free license.
 	* License Key - 'none'. MarkLogic license key if you already have one. For this excercise, we will use free license.
 ![](screenshots/marklogicConfig.png)
-
+8. In the resource configuration page, fill in the following information.
+	* MarkLogic High Availability - 'enable'. Default value.
+	* Load Balancer: Type - 
+	* Load balancer: IPv6 - 
+	* Storage: OS Storage - 
+	* Storage: Data Storage -
+	* Virtual machine: Username - 
+	* Virtual machine: SSH public key - 
+![](screenshots/resourceConfig.png)
+9. Click the "Instance Type" button to pop up the Instance Size Selector. Select a size for VM instance. For this exercise, we will use default value "3x Standard DS13 v2". Click "Select" button and "OK" button on the "Resource Configuration" page.
+![](screenshots/sizeSelector.png)
+10. The summary of the cluster configuration will show. Click "OK" to confirm. If you want to modify some settings, click the corresponding tag on the left (Basics, MarkLogic Configuration, Resource Configuration) to go back.
+11. On the "Buy" page, scroll down to bottom and click "Create" to accept the terms and deploy the stack.
+	
