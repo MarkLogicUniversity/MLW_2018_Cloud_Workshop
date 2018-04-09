@@ -1,5 +1,13 @@
 # Hands-on MarkLogic in the Cloud Workshop: Amazon Web Services (AWS)
 
+Table of Contents:
+- ![Unit 1 - Create the MarkLogic Cluster](unit-1-create-the-marklogic-cluster)
+	- ![Process to Create a MarkLogic Cluster using CloudFormation Templates](Process-to-Create-a-MarkLogic-Cluster-using-CloudFormation-Templates)
+	- ![Enable a MarkLogic AMI](Enable-a-MarkLogic-AMI)
+	- ![Launch your cluster using a CloudFormation tempate.](Launch-your-cluster-using-a-CloudFormation-tempate)
+	- ![Check the Status of the New Instance](Check-the-Status-of-the-New-Instance)
+	- ![Access the Cluster](Access-the-Cluster)
+
 ## Unit 1 - Create the MarkLogic Cluster
 
 In unit 1, we will create a three node MarkLogic cluster using CloudFormation templates on Amazon Web Services. For our purposes, a **node** is an Amazon EC2 server instance running MarkLogic. A **cluster** is one or more MarkLogic nodes working together.
@@ -42,7 +50,7 @@ Let's begin.
   ![](screenshots/acceptTerm.png)
 8. You've now subscribed to the MarkLogic AMI and can proceed to use a CloudFormation template to create your running instance.
 
-### Launch your cluster using a CloudFormation tempate.
+### Launch your cluster using a CloudFormation tempate
 
 1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
 ![](screenshots/cloudformation.png)
