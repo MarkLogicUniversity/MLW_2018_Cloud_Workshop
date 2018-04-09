@@ -72,21 +72,27 @@ Let's begin.
 ![](screenshots/ackIAM.png)
 12. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
 13. After the stack is created, the page will refresh with the name of your completed stack.
+![](screenshots/createComplete.png)
 14. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
 15. The URL to access MarkLogic's Administrative Interface page on port 8001 is in the `Value` column. Copy this URL to use later.
+![](screenshots/stackOutputs.png)
 
 ## Check the Status of the New Instance
-> Note: it takes approximately 4 to 5 minutes for the created MarkLogic server instances to pass their validation checks and become accessible.
+
+> Note: it takes approximately 10 to 15 minutes for the created MarkLogic server instances to pass their validation checks and initialize MarkLogic clusters.
 
 1. Open another tab in your browser.
 2. Go to the AWS Console page at <https://console.aws.amazon.com> .
 3. In the **Compute** section, click on **EC2**.
 4. On the left side, click on **Instances** in the **Instances** group.
+![](screenshots/instanceStatus.png)
 5. In the list of EC2 instances, make sure the state is `started` in the **Instance State** column and the **Status Checks** column is `2/2 checks passed` with a green checkmark icon.
 6. If the status passes both checks, the instance has started successfully.
 
 ## Access the Cluster
+
 Use the URL in the CloudFormation stack's **Outputs** tab to navigate to MarkLogic's Admin Interface.  
+![](screenshots/adminGui.png)
 
 If you need to copy the URL again: 
 
