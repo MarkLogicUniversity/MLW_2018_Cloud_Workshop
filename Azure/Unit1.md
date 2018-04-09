@@ -21,7 +21,7 @@ Before starting, make sure you have done the following.
 
 * If you don’t already have an Microsoft account, create one. [Creating you Azure free account today](https://azure.microsoft.com/en-us/free/)
 * Access Azure portal. [Create and share dashboards in the Azure portal.](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards)
-* Create a subscription.
+* Create a account subscription that running resources will be billed to.
 
 Let's begin.
 
@@ -63,3 +63,25 @@ Let's begin.
 ![](screenshots/summary.png)
 11. On the "Buy" page, scroll down to bottom and click "Create" to accept the terms and deploy the stack.
 ![](screenshots/create.png)
+
+### Check the Status of the New Instances
+
+> Note: it takes approximately 10 to 15 minutes for the created MarkLogic server instances to start up and initialize MarkLogic Servers.
+
+1. Go to Resour Groups by click on the "Resource Groups" button on the left tab bar.
+2. Select the resource group we just created.
+3. From the resource group view, we will see the deployment status and list of successfully created resources.
+![](screenshots/resourceGroup.png)
+4. To be added
+
+### Access the Cluster
+
+1. Go to Resour Groups by click on the "Resource Groups" button on the left tab bar.
+2. Select the resource group we just created.
+3. Select the load balancer's public IPv4 address from the resource list. In this excercise, it's called "developer-lbIp-v4".
+4. From the Public IP address view, copy the "DNS name" value in overview. We will use this address to access the cluster.
+![](screenshots/lbip.png)
+5. Open another tab in the browser, go to the port 80001 of the above address. Enter the Admin user name and password set for the cluster when we create the deployment configuration.
+6. You will see MarkLogic administration interface show up.
+![](screenshots/adminGui.png)
+
