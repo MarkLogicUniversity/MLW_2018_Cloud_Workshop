@@ -34,11 +34,18 @@ Let's begin.
 4. From the search result list, select MarkLogic 9.0-4 Cluster Deployment.
 ![](screenshots/clusterDeployment.png)
 5. Click "create" button to enter the interactive guide for cluster deployment.
-6. In the basic configuration page, fill in the following information.
+6. In the basic configuration page, fill in the following information. Then click "OK" to move on to next step.
 	* Deployment name - "developer".
 	* Number of Nodes - We will use the default value 3 for this excercise.
 	* Subscription - Select a subscription which the running resources will be billed to.
 	* Resource group - "developer". We will create a new one for this excercise.
 	* Location - "East US". You can change the region from the dropdown. For this exercise, we will use US east.
 ![](screenshots/basicConfig.png)
+7. In the MarkLogic configuration page, fill in the following information. Then click "OK" to move on to next step.
+	* Admin user - 
+	* Admin password - 
+	* Confirm admin password - 
+	* Licensee - 'none'. MarkLogic licensee if you already have one. For this excercise, we will use free license.
+	* License Key - 'none'. MarkLogic license key if you already have one. For this excercise, we will use free license.
+![](screenshots/marklogicConfig.png)
 
