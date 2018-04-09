@@ -21,8 +21,24 @@ Before starting, make sure you have done the following.
 
 * If you don’t already have an Microsoft account, create one. [Creating you Azure free account today](https://azure.microsoft.com/en-us/free/)
 * Access Azure portal. [Create and share dashboards in the Azure portal.](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards)
+* Create a subscription.
 
 Let's begin.
 
 ### Launch your cluster using an Azure Solution Tempate
+
+1. Go to [Microsoft Azure Portal](https://portal.azure.com/). Log into the Microsoft account, if needed.
+2. Create button "Create a resource" button on the left tab bar.
+3. In the search text box. Press the ENTER key to begin the search
+![](screenshots/search.png)
+4. From the search result list, select MarkLogic 9.0-4 Cluster Deployment.
+![](screenshots/clusterDeployment.png)
+5. Click "create" button to enter the interactive guide for cluster deployment.
+6. In the basic configuration page, fill in the following information.
+	* Deployment name - "developer".
+	* Number of Nodes - We will use the default value 3 for this excercise.
+	* Subscription - Select a subscription which the running resources will be billed to.
+	* Resource group - "developer". We will create a new one for this excercise.
+	* Location - "East US". You can change the region from the dropdown. For this exercise, we will use US east.
+![](screenshots/basicConfig.png)
 
