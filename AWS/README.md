@@ -1,4 +1,4 @@
-# Hands-on MarkLogic in the Cloud Workshop: Amazon Web Services (AWS)
+# Hands-on MarkLogic in the Cloud Workshop (AWS) Unit 1
 
 Table of Contents:
 - ![Unit 1 - Create the MarkLogic Cluster](unit-1-create-the-marklogic-cluster)
@@ -29,11 +29,11 @@ Open the MarkLogic Server Admin interface. | [Accessing a MarkLogic Server Insta
 
 ### Process to Create a MarkLogic Cluster using CloudFormation Templates
 
-> Before starting, make sure you have done the following.  
+Before starting, make sure you have done the following.  
 
-> * You have created an IAM Role to use for your MarkLogic cluster.
-> * You have created an EC2 Key-Pair to securely shell into your MarkLogic cluster.
-> * You have created a Simple Notification System (SNS) topic to receive log messages from the MarkLogic cluster and copied the SNS topic's ARN. You will need the ARN when creating the cluster.
+* You have created an IAM Role to use for your MarkLogic cluster.
+* You have created an EC2 Key-Pair to securely shell into your MarkLogic cluster.
+* You have created a Simple Notification System (SNS) topic to receive log messages from the MarkLogic cluster and copied the SNS topic's ARN. You will need the ARN when creating the cluster.
 
 Let's begin.
 
