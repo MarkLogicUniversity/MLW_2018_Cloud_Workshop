@@ -121,7 +121,7 @@ Let's begin.
 ![](images/elb.png)
 6. Click on the **Instances** tab at the bottom of Load Balancer page.
 7. You should see three instances of status "In Service" when the MarkLogic cluster is up. If not yet, wait for a few minutes and refresh.
-![](instanceStatus.png)
+![](images/instanceStatus.png)
 
 <a name="access"></a>
 ## Access the Cluster
