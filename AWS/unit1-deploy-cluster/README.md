@@ -106,7 +106,7 @@ Let's begin.
 
 ## Check the Status of the New Cluster
 
-1. Go to CloudFormation page at <https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active>
+1. Go to CloudFormation page at <https://us-west-2.console.aws.amazon.com/cloudformation/home>
 2. Select the stack you just created. Note that you should select the parent stack, not those substacks with a "NESTED" tag.
 3. Click on the **Resource** tab at the bottom.
 4. From the list of resources, find the ElasticLoadBalancer. Most likely, it's on top.
