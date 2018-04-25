@@ -60,19 +60,26 @@ Let's begin.
 7. Click the **Next** button.
 ![](images/stackParameters.png)
 8. Fill in the following information.
-	* AdminPass - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
-	* AdminUser - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
-	* IAMRole - a previously created Identity and Access Management role name. 
-	* InstanceType - the desired EC2 instance type.
-	* KeyName - a previously created EC2 Key-Pair name.
-	* Licensee - leave blank to use the included Developer's License.
-	* LicenseKey - leave blank.
-	* LogSNS - the ARN of a previously created Simple Notification System topic.
-	* NodePerZone - the number of MarkLogic servers created per Availability Zone. Leave this at 1 to create a simple 3-node cluster.
-	* SpotPrice - leave blank.
-	* VolumeSize - leave at the default of 10 GB.
-	* VolumeType - leave at the default.
-	* Zone1, Zone2, Zone3 - select 3 different Availability Zones
+	* Stack Name - a unique stack name across the account (example: use last name as prefix)
+	* IAM Role - a previously created Identity and Access Management role name. 
+	* Volume Size - leave at the default of 10 GB.
+	* Volume Type - leave at the default.
+	* Spot Price - leave blank.
+	* SSH Key Name - a previously created EC2 Key-Pair name.
+	* Number of Zones - leave at the default of 3.
+	* Nodes Per Zone - total number of nodes per Zone. Leave this at 1 to create a simple 3-node cluster.
+	* Availability Zone - select "us-west-2a", "us-west-2b" and "us-west-2c" from dropdown menu.
+	* Instance Public IP - leave at the default of disable.
+	* Logging SNS ARN - the ARN of a previously created Simple Notification System topic.
+	* VPC CIDR - leave at the default value.
+	* Subnet 1 CIDR - leave at the default value.
+	* Subnet 2 CIDR - leave at the default value.
+	* Subnet 3 CIDR - leave at the default value.
+	* Admin User - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
+	* Admin Password - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
+	* Licensee - leave at the default value "none" to use the included Developer's License.
+	* LicenseKey - leave at the default value "none"
+	
 9. Click the **Next** button.
 10. On the **Options** page, create a tag with key as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
 ![](images/tagStack.png)
