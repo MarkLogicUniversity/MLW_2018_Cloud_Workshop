@@ -118,8 +118,10 @@ Let's begin.
 3. Click on the **Resource** tab at the bottom.
 4. From the list of resources, find the ElasticLoadBalancer. Most likely, it's on top.
 5. Click on the **Physical ID** of ElasticLoadBalancer. You will be redirected to ElasticLoadBalancer page.
+![](images/elb.png)
 6. Click on the **Instances** tab at the bottom of Load Balancer page.
 7. You should see three instances of status "In Service" when the MarkLogic cluster is up. If not yet, wait for a few minutes and refresh.
+![](instanceStatus.png)
 
 <a name="access"></a>
 ## Access the Cluster
