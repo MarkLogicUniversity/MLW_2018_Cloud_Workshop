@@ -43,22 +43,22 @@ Let's begin.
 2. In the top search bar, leave the dropdown at the default setting of **AMI & SaaS** then enter the search term `marklogic`.
 3. Click the Search icon or press the ENTER key to begin the search.
 4. In the results, click on **MarkLogic Developer 9**.
-  ![](screenshots/marketplace.png)
+  ![](images/marketplace.png)
 5. Click the **Continue to Subscribe** button.
 6. Click the **Service Catalog** tab.
 7. Click the **Accept Software Terms** button.
-  ![](screenshots/acceptTerm.png)
+  ![](images/acceptTerm.png)
 8. You've now subscribed to the MarkLogic AMI and can proceed to use a CloudFormation template to create your running instance.
 
 ### Launch your cluster using a CloudFormation tempate
 
 1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
-![](screenshots/cloudformation.png)
+![](images/cloudformation.png)
 2. Click the **Create new stack** button.
 6. In the **Select Template** section, select the radio button "Upload a template to Amazon S3". Click the "Choose File" button and choose the template file `mlcluster-vpc.template` provided.
-![](screenshots/selectTemplate.png)
+![](images/selectTemplate.png)
 7. Click the **Next** button.
-![](screenshots/stackParameters.png)
+![](images/stackParameters.png)
 8. Fill in the following information.
 	* AdminPass - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
 	* AdminUser - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
@@ -75,15 +75,15 @@ Let's begin.
 	* Zone1, Zone2, Zone3 - select 3 different Availability Zones
 9. Click the **Next** button.
 10. On the **Options** page, create a tag with key as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
-![](screenshots/tagStack.png)
+![](images/tagStack.png)
 11. On the **Review** page, scroll to the bottom and check the box "I acknowledge that AWS CloudFormation might create IAM resources with custom names". This is to authorize CloudFormation to create IAM role based on the permissions specified in the template. Then click the **Create** button.
-![](screenshots/ackIAM.png)
+![](images/ackIAM.png)
 12. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
 13. After the stack is created, the page will refresh with the name of your completed stack.
-![](screenshots/createComplete.png)
+![](images/createComplete.png)
 14. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
 15. The URL to access MarkLogic's Administrative Interface page on port 8001 is in the `Value` column. Copy this URL to use later.
-![](screenshots/stackOutputs.png)
+![](images/stackOutputs.png)
 
 ## Check the Status of the New Instance
 
@@ -93,14 +93,14 @@ Let's begin.
 2. Go to the AWS Console page at <https://console.aws.amazon.com> .
 3. In the **Compute** section, click on **EC2**.
 4. On the left side, click on **Instances** in the **Instances** group.
-![](screenshots/instanceStatus.png)
+![](images/instanceStatus.png)
 5. In the list of EC2 instances, make sure the state is `started` in the **Instance State** column and the **Status Checks** column is `2/2 checks passed` with a green checkmark icon.
 6. If the status passes both checks, the instance has started successfully.
 
 ## Access the Cluster
 
 Use the URL in the CloudFormation stack's **Outputs** tab to navigate to MarkLogic's Admin Interface.  
-![](screenshots/adminGui.png)
+![](images/adminGui.png)
 
 If you need to copy the URL again: 
 
