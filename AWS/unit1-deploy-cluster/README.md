@@ -104,6 +104,16 @@ Let's begin.
 5. In the list of EC2 instances, make sure the state is `started` in the **Instance State** column and the **Status Checks** column is `2/2 checks passed` with a green checkmark icon.
 6. If the status passes both checks, the instance has started successfully.
 
+## Check the Status of the New Cluster
+
+1. Go to CloudFormation page at <https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active>
+2. Select the stack you just created. Note that you should select the parent stack, not those substacks with a "NESTED" tag.
+3. Click on the **Resource** tab at the bottom.
+4. From the list of resources, find the ElasticLoadBalancer. Most likely, it's on top.
+5. Click on the **Physical ID** of ElasticLoadBalancer. You will be redirected to ElasticLoadBalancer page.
+6. Click on the **Instances** tab at the bottom of Load Balancer page.
+7. You should see three instances of status "In Service" when the MarkLogic cluster is up. If not yet, wait for a few minutes and refresh.
+
 ## Access the Cluster
 
 Use the URL in the CloudFormation stack's **Outputs** tab to navigate to MarkLogic's Admin Interface.  
