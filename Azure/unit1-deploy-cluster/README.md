@@ -6,6 +6,7 @@ Table of Contents:
 	- [Launch your cluster using a CloudFormation tempate.](#launch)
 	- [Check the Status of the New Cluster](#cluster)
 	- [Access the Cluster](#access)
+	- [Optional Exercise](#optional)
 
 <a name="unit1"></a>
 ## Unit 1 - Create the MarkLogic Cluster
@@ -34,7 +35,7 @@ Let's begin.
 ![](images/search.png)
 4. From the search result list, select MarkLogic 9.0-4 Cluster Deployment.
 ![](images/clusterDeployment.png)
-5. Click "create" button to enter the interactive guide for cluster deployment.
+5. Click "create" button to enter the interactive guide for cluster deployment. <a name="step6"></a>
 6. In the basic configuration page, fill in the following information. Then click "OK" to move on to next step.
 	* Deployment name - a unique string that will be used as resources prefix. Example: **mlwdemo**.
 	* Number of Nodes - leave at the default of **3** nodes.
@@ -49,6 +50,7 @@ Let's begin.
 	* Licensee - leave at the default value **none** to use the included Developer's License.
 	* License Key - leave at the default value **none** to use the included Developer's License.
 ![](images/marklogicConfig.png)
+<a name="step8"></a>
 8. In the resource configuration page, fill in the following information.
 	* MarkLogic High Availability - leave at the default of **enable**.
 	* Load Balancer: Type - leave at the default of **public**.
@@ -88,3 +90,13 @@ Let's begin.
 6. You will see MarkLogic administration interface show up.
 ![](images/adminGui.png)
 
+<a name="optional"></a>
+### Optional Exercise
+
+Once you go through the basic flow of deploying a cluster, you can also customize the cluster by using different deployment type.
+
+- In [Step 6 of Launch](#step6), select **1** node to be deployed as a cluster.
+- In [Step 8 of Launch](#step8), you only need to configure fewer parameters for the single node cluster.
+- Follow [Step 9 of Launch] and subsequent steps to finish deployment.
+
+Now you should see a new one node cluster is coming up!
