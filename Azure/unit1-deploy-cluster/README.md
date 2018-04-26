@@ -2,8 +2,8 @@
 
 Table of Contents:
 - [Unit 1 - Create the MarkLogic Cluster](#unit1)
-	- [Process to Create a MarkLogic Cluster using CloudFormation Templates](#process)
-	- [Launch your cluster using a CloudFormation tempate.](#launch)
+	- [Process to Create a MarkLogic Cluster using Azure Solution Template](#process)
+	- [Launch your cluster using an Azure Solution Tempate](#launch)
 	- [Check the Status of the New Cluster](#cluster)
 	- [Access the Cluster](#access)
 	- [Optional Exercise](#optional)
