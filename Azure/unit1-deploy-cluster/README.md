@@ -1,20 +1,20 @@
 # Hands-on MarkLogic in the Cloud Workshop (Azure) Unit 1
 
 Table of Contents:
-- ![Unit 1 - Create the MarkLogic Cluster](unit-1-create-the-marklogic-cluster)
-	- ![Process to Create a MarkLogic Cluster using CloudFormation Templates](Process-to-Create-a-MarkLogic-Cluster-using-CloudFormation-Templates)
-	- ![Enable a MarkLogic AMI](Enable-a-MarkLogic-AMI)
-	- ![Launch your cluster using a CloudFormation tempate.](Launch-your-cluster-using-a-CloudFormation-tempate)
-	- ![Check the Status of the New Instance](Check-the-Status-of-the-New-Instance)
-	- ![Access the Cluster](Access-the-Cluster)
+- [Unit 1 - Create the MarkLogic Cluster](#unit1)
+	- [Process to Create a MarkLogic Cluster using CloudFormation Templates](#process)
+	- [Launch your cluster using a CloudFormation tempate.](#launch)
+	- [Check the Status of the New Cluster](#cluster)
+	- [Access the Cluster](#access)
 
+<a name="unit1"></a>
 ## Unit 1 - Create the MarkLogic Cluster
 
 In unit 1, we will create a three node MarkLogic cluster using Solution Templates on Microsoft Azure. For our purposes, a **node** is an Azure VM instance running MarkLogic. A **cluster** is one or more MarkLogic nodes working together.
 
 It's simple to create a MarkLogic cluster in Microsoft Azure. But before you do, you should become familiar with the process. It's highly recommended to read through the [MarkLogic Server on Microsoft® Azure® Guide](http://docs.marklogic.com/guide/azure) .
 
-
+<a name="process"></a>
 ### Process to Create a MarkLogic Cluster using Azure Solution Template
 
 Before starting, make sure you have done the following.  
@@ -25,6 +25,7 @@ Before starting, make sure you have done the following.
 
 Let's begin.
 
+<a name="launch"></a>
 ### Launch your cluster using an Azure Solution Tempate
 
 1. Go to [Microsoft Azure Portal](https://portal.azure.com/). Log into the Microsoft account, if needed.
@@ -35,25 +36,25 @@ Let's begin.
 ![](images/clusterDeployment.png)
 5. Click "create" button to enter the interactive guide for cluster deployment.
 6. In the basic configuration page, fill in the following information. Then click "OK" to move on to next step.
-	* Deployment name - "developer".
-	* Number of Nodes - We will use the default value 3 for this excercise.
-	* Subscription - Select a subscription which the running resources will be billed to.
-	* Resource group - "developer". We will create a new one for this excercise.
-	* Location - "East US". You can change the region from the dropdown. For this exercise, we will use US east.
+	* Deployment name - a unique string that will be used as resources prefix. Example: "developer".
+	* Number of Nodes - leave at the default of 3 nodes.
+	* Subscription - select a subscription which the running resources will be billed to.
+	* Resource group - use existing and select a resource group from the dropdown menu.
+	* Location - "US West". You can change the region from the dropdown. For this exercise, we will use US West.
 ![](images/basicConfig.png)
 7. In the MarkLogic configuration page, fill in the following information. Then click "OK" to move on to next step.
-	* Admin user - 
-	* Admin password - 
-	* Confirm admin password - 
-	* Licensee - 'none'. MarkLogic licensee if you already have one. For this excercise, we will use free license.
-	* License Key - 'none'. MarkLogic license key if you already have one. For this excercise, we will use free license.
+	* Admin user - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
+	* Admin password - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
+	* Confirm admin password - confirm the admin password.
+	* Licensee - leave at the default value "none" to use the included Developer's License.
+	* License Key - leave at the default value "none" to use the included Developer's License.
 ![](images/marklogicConfig.png)
 8. In the resource configuration page, fill in the following information.
-	* MarkLogic High Availability - 'enable'. Default value.
-	* Load Balancer: Type - 
-	* Load balancer: IPv6 - 
-	* Storage: OS Storage - 
-	* Storage: Data Storage -
+	* MarkLogic High Availability - leave at the default of **enable**.
+	* Load Balancer: Type - leave at the default of **public**.
+	* Load balancer: IPv6 - leave at the default of **enable**.
+	* Storage: OS Storage - Select **standard** for this exercise.
+	* Storage: Data Storage - Select **standard** for this exercise.
 	* Virtual machine: Username - 
 	* Virtual machine: SSH public key - 
 ![](images/resourceConfig.png)
@@ -64,7 +65,8 @@ Let's begin.
 11. On the "Buy" page, scroll down to bottom and click "Create" to accept the terms and deploy the stack.
 ![](images/create.png)
 
-### Check the Status of the New Instances
+<a name="cluster"></a>
+### Check the Status of the New Cluster
 
 > Note: it takes approximately 10 to 15 minutes for the created MarkLogic server instances to start up and initialize MarkLogic Servers.
 
@@ -72,8 +74,9 @@ Let's begin.
 2. Select the resource group we just created.
 3. From the resource group view, we will see the deployment status and list of successfully created resources.
 ![](images/resourceGroup.png)
-4. To be added
+4. Once it shows all deployment are finished and successful, the cluster is ready to use.
 
+<a name="access"></a>
 ### Access the Cluster
 
 1. Go to Resour Groups by click on the "Resource Groups" button on the left tab bar.
