@@ -7,7 +7,8 @@ Table of Contents:
 	- [Launch your cluster using a CloudFormation tempate.](#launch)
 	- [Check the Status of the New Instance](#instance)
 	- [Check the Status of the New Cluster](#cluster)
-	- [Access the Cluster](#a)
+	- [Access the Cluster](#access)
+	- [Optional Exercise](#optional)
 
 <a name="unit1"></a>
 ## Unit 1 - Create the MarkLogic Cluster
@@ -36,7 +37,6 @@ Before starting, make sure you have done the following.
 
 * You have created an IAM Role to use for your MarkLogic cluster.
 * You have created an EC2 Key-Pair to securely shell into your MarkLogic cluster.
-* You have created a Simple Notification System (SNS) topic to receive log messages from the MarkLogic cluster and copied the SNS topic's ARN. You will need the ARN when creating the cluster.
 
 Let's begin.
 
@@ -60,11 +60,11 @@ Let's begin.
 1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
 ![](images/cloudformation.png)
 2. Click the **Create new stack** button.
-6. In the **Select Template** section, select the radio button "Upload a template to Amazon S3". Click the "Choose File" button and choose the template file `mlcluster-vpc.template` provided.
+3. In the **Select Template** section, select the radio button "Upload a template to Amazon S3". Click the "Choose File" button and choose the template file `mlcluster-vpc.template` provided. <a name="step3"></a>
 ![](images/selectTemplate.png)
-7. Click the **Next** button.
+4. Click the **Next** button.
 ![](images/stackParameters.png)
-8. Fill in the following information.
+5. Fill in the following information. <a name="step5"></a>
 	* Stack Name - a unique stack name across the account (example: use last name as prefix)
 	* IAM Role - a previously created Identity and Access Management role name. 
 	* Volume Size - leave at the default of 10 GB.
@@ -75,7 +75,7 @@ Let's begin.
 	* Nodes Per Zone - total number of nodes per Zone. Leave this at 1 to create a simple 3-node cluster.
 	* Availability Zone - select "us-west-2a", "us-west-2b" and "us-west-2c" from dropdown menu.
 	* Instance Public IP - leave at the default of disable.
-	* Logging SNS ARN - the ARN of a previously created Simple Notification System topic.
+	* Logging SNS ARN - optional. Leave at the default value.
 	* VPC CIDR - leave at the default value.
 	* Subnet 1 CIDR - leave at the default value.
 	* Subnet 2 CIDR - leave at the default value.
@@ -84,17 +84,16 @@ Let's begin.
 	* Admin Password - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
 	* Licensee - leave at the default value "none" to use the included Developer's License.
 	* LicenseKey - leave at the default value "none"
-	
-9. Click the **Next** button.
-10. On the **Options** page, create a tag with key as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
+6. Click the **Next** button. <a name="step6"></a>
+7. On the **Options** page, create a tag with key as `Name` and value as your stack name specified in the previous page. Leave all other settings to the defaults, scroll to the bottom and click the **Next** button.
 ![](images/tagStack.png)
-11. On the **Review** page, scroll to the bottom and check the box "I acknowledge that AWS CloudFormation might create IAM resources with custom names". This is to authorize CloudFormation to create IAM role based on the permissions specified in the template. Then click the **Create** button.
+8. On the **Review** page, scroll to the bottom and check the box "I acknowledge that AWS CloudFormation might create IAM resources with custom names". This is to authorize CloudFormation to create IAM role based on the permissions specified in the template. Then click the **Create** button.
 ![](images/ackIAM.png)
-12. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
-13. After the stack is created, the page will refresh with the name of your completed stack.
+9. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
+10. After the stack is created, the page will refresh with the name of your completed stack.
 ![](images/createComplete.png)
-14. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
-15. The URL to access MarkLogic's Administrative Interface page on port 8001 is in the `Value` column. Copy this URL to use later.
+11. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
+12. The URL to access MarkLogic's Administrative Interface page on port 8001 is in the `Value` column. Copy this URL to use later.
 ![](images/stackOutputs.png)
 
 <a name="instance"></a>
@@ -134,3 +133,31 @@ If you need to copy the URL again:
 * Navigate to the **CloudFormation** service by clicking on the **Services** link at the top of the AWS Console page. 
 * Select your CloudFormation stack by clicking the checkbox. 
 * Click the **Outputs** tab below the list of CloudFormation stacks for the URL.
+
+<a name="optional"></a>
+### Optional Excercise
+
+Once you go through the basic flow of deploying a cluster, you can also customize the cluster by using different deployment type.
+
+- Use the CloudFormation template that deploys cluster into **existing VPC**. ([Step 3 of Launching](#step3))
+- Fill in the following parameters. ([Step 5 of Launching](#step5))
+	* Stack Name - a unique stack name across the account (example: use last name as prefix)
+	* IAM Role - a previously created Identity and Access Management role name. 
+	* Volume Size - leave at the default of 10 GB.
+	* Volume Type - leave at the default.
+	* Spot Price - leave blank.
+	* SSH Key Name - a previously created EC2 Key-Pair name.
+	* **Number of Zones - Set to 1. Deploy to only 1 availability zone.**
+	* Nodes Per Zone - total number of nodes per Zone. Leave this at 1 to create a simple 3-node cluster.
+	* **Availability Zone - select "us-west-2a" from dropdown menu.**
+	* Instance Public IP - leave at the default of disable.
+	* Logging SNS ARN - optional. Leave at the default value.
+	* **VPC - Select the VPC you created in this exercise unit.**
+	* **Subnets - Select one subnet you created in this excercise unit.**
+	* Admin User - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
+	* Admin Password - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
+	* Licensee - leave at the default value "none" to use the included Developer's License.
+	* LicenseKey - leave at the default value "none"
+- Follow [Step 6 of Launch](#step6) to finish deployment.
+
+Now you should see a new one node cluster is coming up!
