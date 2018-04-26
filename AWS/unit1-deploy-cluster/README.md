@@ -3,7 +3,7 @@
 Table of Contents:
 - [Unit 1 - Create the MarkLogic Cluster](#unit1)
 	- [Process to Create a MarkLogic Cluster using CloudFormation Templates](#process)
-	- [Enable a MarkLogic AMI](#enable)
+	- [Enable a MarkLogic AMI](#ami)
 	- [Launch your cluster using a CloudFormation tempate.](#launch)
 	- [Check the Status of the New Instance](#instance)
 	- [Check the Status of the New Cluster](#cluster)
@@ -60,7 +60,7 @@ Let's begin.
 1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
 ![](images/cloudformation.png)
 2. Click the **Create new stack** button.
-3. In the **Select Template** section, select the radio button "Upload a template to Amazon S3". Click the "Choose File" button and choose the template file `mlcluster-vpc.template` provided. <a name="step3"></a>
+3. In the **Select Template** section, select the radio button "Specify an Amazon S3 template URL". Copy and paste the URL to the `mlcluster-vpc.template` provided. <a name="step3"></a>
 ![](images/selectTemplate.png)
 4. Click the **Next** button.
 ![](images/stackParameters.png)
@@ -139,7 +139,7 @@ If you need to copy the URL again:
 
 Once you go through the basic flow of deploying a cluster, you can also customize the cluster by using different deployment type.
 
-- Use the CloudFormation template that deploys cluster into **existing VPC**. ([Step 3 of Launching](#step3))
+- Use the CloudFormation template that deploys cluster into **existing VPC**. Copy and paste the URL to the `mlcluster.template` provided. ([Step 3 of Launching](#step3))
 - Fill in the following parameters. ([Step 5 of Launching](#step5))
 	* Stack Name - a unique stack name across the account (example: use last name as prefix)
 	* IAM Role - a previously created Identity and Access Management role name. 
