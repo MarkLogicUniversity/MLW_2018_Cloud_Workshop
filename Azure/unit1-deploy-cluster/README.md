@@ -36,25 +36,25 @@ Let's begin.
 ![](images/clusterDeployment.png)
 5. Click "create" button to enter the interactive guide for cluster deployment.
 6. In the basic configuration page, fill in the following information. Then click "OK" to move on to next step.
-	* Deployment name - a unique string that will be used as resources prefix. Example: "developer".
-	* Number of Nodes - leave at the default of 3 nodes.
+	* Deployment name - a unique string that will be used as resources prefix. Example: **mlwdemo**.
+	* Number of Nodes - leave at the default of **3** nodes.
 	* Subscription - select a subscription which the running resources will be billed to.
 	* Resource group - use existing and select a resource group from the dropdown menu.
-	* Location - "US West". You can change the region from the dropdown. For this exercise, we will use US West.
+	* Location - You can change the region from the dropdown. For this exercise, we will use **US West**.
 ![](images/basicConfig.png)
 7. In the MarkLogic configuration page, fill in the following information. Then click "OK" to move on to next step.
 	* Admin user - the MarkLogic administrator user name. The user and password will be created when the cluster is created.
-	* Admin password - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
+	* Admin password - the MarkLogic administrator user password. The user and password will be created when the cluster is created. The Password must be 12-40 characters long and contain at least one uppercase letter, digit and special character `.!@#$%^&()-_=+`
 	* Confirm admin password - confirm the admin password.
-	* Licensee - leave at the default value "none" to use the included Developer's License.
-	* License Key - leave at the default value "none" to use the included Developer's License.
+	* Licensee - leave at the default value **none** to use the included Developer's License.
+	* License Key - leave at the default value **none** to use the included Developer's License.
 ![](images/marklogicConfig.png)
 8. In the resource configuration page, fill in the following information.
 	* MarkLogic High Availability - leave at the default of **enable**.
 	* Load Balancer: Type - leave at the default of **public**.
 	* Load balancer: IPv6 - leave at the default of **enable**.
-	* Storage: OS Storage - Select **standard** for this exercise.
-	* Storage: Data Storage - Select **standard** for this exercise.
+	* Storage: OS Storage - Select **premium** for this exercise.
+	* Storage: Data Storage - Select **premium** for this exercise.
 	* Virtual machine: Username - 
 	* Virtual machine: SSH public key - 
 ![](images/resourceConfig.png)
@@ -70,7 +70,7 @@ Let's begin.
 
 > Note: it takes approximately 10 to 15 minutes for the created MarkLogic server instances to start up and initialize MarkLogic Servers.
 
-1. Go to Resour Groups by click on the "Resource Groups" button on the left tab bar.
+1. Go to Resour Groups by click on the **Resource Groups** button on the left tab bar.
 2. Select the resource group we just created.
 3. From the resource group view, we will see the deployment status and list of successfully created resources.
 ![](images/resourceGroup.png)
@@ -79,10 +79,10 @@ Let's begin.
 <a name="access"></a>
 ### Access the Cluster
 
-1. Go to Resour Groups by click on the "Resource Groups" button on the left tab bar.
+1. Go to Resour Groups by click on the **Resource Groups** button on the left tab bar.
 2. Select the resource group we just created.
-3. Select the load balancer's public IPv4 address from the resource list. In this excercise, it's called "developer-lbIp-v4".
-4. From the Public IP address view, copy the "DNS name" value in overview. We will use this address to access the cluster.
+3. Select the load balancer's public IPv4 address from the resource list. In this excercise, it's called "mlwdemo-lbIp-v4".
+4. From the Public IP address view, copy the **DNS Name** value in overview. We will use this address to access the cluster.
 ![](images/lbip.png)
 5. Open another tab in the browser, go to the port 80001 of the above address. Enter the Admin user name and password set for the cluster when we create the deployment configuration.
 6. You will see MarkLogic administration interface show up.
