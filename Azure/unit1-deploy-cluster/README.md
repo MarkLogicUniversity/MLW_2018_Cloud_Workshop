@@ -60,6 +60,7 @@ Let's begin.
 	* Virtual machine: Username - 
 	* Virtual machine: SSH public key - 
 ![](images/resourceConfig.png)
+<a name="step8"></a>
 9. Click the "Instance Type" button to pop up the Instance Size Selector. Select a size for VM instance. For this exercise, we will use default value "3x Standard DS13 v2". Click "Select" button and "OK" button on the "Resource Configuration" page.
 ![](images/sizeSelector.png)
 10. The summary of the cluster configuration will show. Click "OK" to confirm. If you want to modify some settings, click the corresponding tag on the left (Basics, MarkLogic Configuration, Resource Configuration) to go back.
@@ -97,6 +98,6 @@ Once you go through the basic flow of deploying a cluster, you can also customiz
 
 - In [Step 6 of Launch](#step6), select **1** node to be deployed as a cluster.
 - In [Step 8 of Launch](#step8), you only need to configure fewer parameters for the single node cluster.
-- Follow [Step 9 of Launch] and subsequent steps to finish deployment.
+- Follow [Step 9 of Launch](#step9) and subsequent steps to finish deployment.
 
 Now you should see a new one node cluster is coming up!
