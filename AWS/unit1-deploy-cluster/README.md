@@ -158,6 +158,6 @@ Once you go through the basic flow of deploying a cluster, you can also customiz
 	* Admin Password - the MarkLogic administrator user password. The user and password will be created when the cluster is created.
 	* Licensee - leave at the default value "none" to use the included Developer's License.
 	* LicenseKey - leave at the default value "none"
-- Follow [Step 6 of Launch](#step6) to finish deployment.
+- Follow [Step 6 of Launch](#step6) and subsequent steps to finish deployment.
 
 Now you should see a new one node cluster is coming up!
