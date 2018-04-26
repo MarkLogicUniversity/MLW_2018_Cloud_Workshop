@@ -19,7 +19,7 @@ It's simple to create a MarkLogic cluster in Microsoft Azure. But before you do,
 
 Before starting, make sure you have done the following.  
 
-* If you don’t already have an Microsoft account, create one. [Creating you Azure free account today](https://azure.microsoft.com/en-us/free/)
+* If you don’t already have an Microsoft account, create one. [Creating you Azure free account today].(https://azure.microsoft.com/en-us/free/)
 * Access Azure portal. [Create and share dashboards in the Azure portal.](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards)
 * Create a account subscription that running resources will be billed to.
 
