@@ -30,9 +30,9 @@ Let's begin.
 1. Go to [Microsoft Azure Portal](https://portal.azure.com/). Log into the Microsoft account, if needed.
 2. Create button "Create a resource" button on the left tab bar.
 3. In the search text box. Press the ENTER key to begin the search
-![](screenshots/search.png)
+![](images/search.png)
 4. From the search result list, select MarkLogic 9.0-4 Cluster Deployment.
-![](screenshots/clusterDeployment.png)
+![](images/clusterDeployment.png)
 5. Click "create" button to enter the interactive guide for cluster deployment.
 6. In the basic configuration page, fill in the following information. Then click "OK" to move on to next step.
 	* Deployment name - "developer".
@@ -40,14 +40,14 @@ Let's begin.
 	* Subscription - Select a subscription which the running resources will be billed to.
 	* Resource group - "developer". We will create a new one for this excercise.
 	* Location - "East US". You can change the region from the dropdown. For this exercise, we will use US east.
-![](screenshots/basicConfig.png)
+![](images/basicConfig.png)
 7. In the MarkLogic configuration page, fill in the following information. Then click "OK" to move on to next step.
 	* Admin user - 
 	* Admin password - 
 	* Confirm admin password - 
 	* Licensee - 'none'. MarkLogic licensee if you already have one. For this excercise, we will use free license.
 	* License Key - 'none'. MarkLogic license key if you already have one. For this excercise, we will use free license.
-![](screenshots/marklogicConfig.png)
+![](images/marklogicConfig.png)
 8. In the resource configuration page, fill in the following information.
 	* MarkLogic High Availability - 'enable'. Default value.
 	* Load Balancer: Type - 
@@ -56,13 +56,13 @@ Let's begin.
 	* Storage: Data Storage -
 	* Virtual machine: Username - 
 	* Virtual machine: SSH public key - 
-![](screenshots/resourceConfig.png)
+![](images/resourceConfig.png)
 9. Click the "Instance Type" button to pop up the Instance Size Selector. Select a size for VM instance. For this exercise, we will use default value "3x Standard DS13 v2". Click "Select" button and "OK" button on the "Resource Configuration" page.
-![](screenshots/sizeSelector.png)
+![](images/sizeSelector.png)
 10. The summary of the cluster configuration will show. Click "OK" to confirm. If you want to modify some settings, click the corresponding tag on the left (Basics, MarkLogic Configuration, Resource Configuration) to go back.
-![](screenshots/summary.png)
+![](images/summary.png)
 11. On the "Buy" page, scroll down to bottom and click "Create" to accept the terms and deploy the stack.
-![](screenshots/create.png)
+![](images/create.png)
 
 ### Check the Status of the New Instances
 
@@ -71,7 +71,7 @@ Let's begin.
 1. Go to Resour Groups by click on the "Resource Groups" button on the left tab bar.
 2. Select the resource group we just created.
 3. From the resource group view, we will see the deployment status and list of successfully created resources.
-![](screenshots/resourceGroup.png)
+![](images/resourceGroup.png)
 4. To be added
 
 ### Access the Cluster
@@ -80,8 +80,8 @@ Let's begin.
 2. Select the resource group we just created.
 3. Select the load balancer's public IPv4 address from the resource list. In this excercise, it's called "developer-lbIp-v4".
 4. From the Public IP address view, copy the "DNS name" value in overview. We will use this address to access the cluster.
-![](screenshots/lbip.png)
+![](images/lbip.png)
 5. Open another tab in the browser, go to the port 80001 of the above address. Enter the Admin user name and password set for the cluster when we create the deployment configuration.
 6. You will see MarkLogic administration interface show up.
-![](screenshots/adminGui.png)
+![](images/adminGui.png)
 
