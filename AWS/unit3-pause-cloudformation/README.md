@@ -55,4 +55,31 @@ Let's take a look at the process of pausing and resuming a MarkLogic cluster.
 3. Enter `1` for the **Nodes per Zone** parameter.
 4. Continue with steps 6 through 10 in the **Pause your CloudFormation Stack** section.
 
+## Summary
+You can pause and resume MarkLogic clusters to save on EC2 instance costs and resources. This is useful for intermittent usage such as development, test and QA purposes. Using CloudFormation templates enable you to quickly pause, resume and scale up MarkLogic clusters.
 
+## Quiz
+1. AWS CloudFormation templates create:  
+	1. MarkLogic EC2 instances.
+	2. Elastic Block Storage (EBS) for MarkLogic data and configuration.
+	3. An AWS Elastic Load Balancer that distributes requests to MarkLogic Evaluator Nodes (Application Servers).
+	4. All of the above.
+2. You can pause an EC2 instance but cannot pause an entire MarkLogic cluster. 
+	1. True.
+	2. False.
+3. Healthy MarkLogic EC2 instances that are ready to be contacted display an Elastic Load Balancer status of:
+	1. Ready.
+	2. InRange.
+	3. InService.
+4. When viewing a CloudFormation stack, you'd select the main stack to:
+	1. Update the MarkLogic CloudFormation stack parameters.
+	2. Get the URL for the MarkLogic Admininstrative Interface on port 8001.
+	3. View the resources created such as the Elastic Load Balancer.
+	4. All of the above.  
+
+
+(Answers to Quiz)  
+1) 4.  
+2) 2.  
+3) 3.  
+4) 4.  

@@ -71,20 +71,30 @@ When Amazon's Elastic Load Balancer doesn't get a response from MarkLogic's Heal
 
 ## Quiz
 1. AutoScaling Groups ensure that...
-	* Databases don't run out of storage space.
-	* Unhealthy MarkLogic instances are restarted.
-	* Data is automatically backed up to S3 Buckets.
-2. Managed Clusters ensure that...
-	* New MarkLogic instances
+	1. Databases don't run out of storage space.
+	2. Unhealthy MarkLogic instances are restarted.
+	3. Data is automatically backed up to S3 Buckets.
+2. One feature of Managed Clusters ensures that...
+	1. New MarkLogic instances replace existing, unhealthy instances.
+	2. Managers can cluster around the water fountain.
+	3. MarkLogic Clusters on AWS can easily share data.
 3. When an instance is created, it has an **Instance State** of...
-	* **running**
-	* **started**
-	* **initialized**
+	1. **running**
+	2. **started**
+	3. **initialized**
 4. When an instance is terminated, it remains in the table of instances...
-	* Until you remove it from the list.
-	* Until the instance is completely deleted by AWS.
-	* For up to 2 minutes, then removed from the list. 
+	1. Until you remove it from the list.
+	2. Until the instance is completely deleted by AWS.
+	3. For up to 2 minutes, then removed from the list. 
 5. When the new instance starts, it has a new hostname. How do the other MarkLogic servers know how to contact it?
-	* The other instances ping until they get a response.
-	* The Managed Cluster feature automatically detects hostname changes and propagates the changes throughout the cluster.
-	* The new instance's hostname has to be manually changed to the older hostname.  
+	1. The other instances ping until they get a response.
+	2. The Managed Cluster feature automatically detects hostname changes and propagates the changes throughout the cluster.
+	3. The new instance's hostname has to be manually changed to the older hostname.  
+
+
+(Answers to Quiz)  
+1) 2.  
+2) 1.  
+3) 1.  
+4) 3.  
+5) 2.  
