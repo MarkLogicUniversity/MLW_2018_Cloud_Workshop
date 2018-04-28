@@ -9,7 +9,7 @@ In this unit, we will explore how to add another node to an existing MarkLogic c
 
 <a name="creatingTheNode"></a>
 ## Creating the Node
-08. Starting from the [*Azure Dashboard*](https://portal.azure.com), launch the *Marketplace*.  
+01. Starting from the [*Azure Dashboard*](https://portal.azure.com), launch the *Marketplace*.  
 ![](images/azure-unit2-00001.png)
 9. Search for `MarkLogic`
 09. From the list you can choose between developer or bring your own license.  For this demonstration we will choose 9.0-4 Developer to match the version was selected in Unit 1.  
@@ -42,7 +42,7 @@ In this unit, we will explore how to add another node to an existing MarkLogic c
 
 <a name="addingNode"></a>
 ## Adding the Node to the Cluster
-21. Use the full DNS name of our new node to bring up the admin interface on port 8001.
+1. Use the full DNS name of our new node to bring up the admin interface on port 8001.
 22. Go ahead and initialize the node by clicking the **OK** button.
 22. Once the basic initialization has occurred, we need to add our new node into the cluster.  Use the full DNS name for one of the nodes created in Unit 1 for the **Host Name**.  This can be found using the *Azure Dashboard*.  
 *Azure Dashboard* > *All resources* > *developer-ipv4-node0*, copy the **DNS name**  
