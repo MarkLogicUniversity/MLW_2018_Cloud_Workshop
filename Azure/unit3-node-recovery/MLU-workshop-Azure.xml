@@ -1,0 +1,83 @@
+<export><workspace name="MLU-workshop-Azure"><query name="Set the stage" focus="true" listorder="1" taborder="1" active="true" database="7525011248395402534" server="3469689428179267856" database-name="Documents" server-name="App-Services" mode="xquery">xquery version "1.0-ml";
+
+(: THIS WILL CREATE A FOREST, A DATABASE, AND TIE THEM TOGETHER. :)
+import module namespace admin = "http://marklogic.com/xdmp/admin" at "/MarkLogic/admin.xqy";
+
+let $config := admin:get-configuration()
+let $config := admin:forest-create($config,"mlu-workshop-azure-Forest",xdmp:host(), "/datadrive/")
+let $config := admin:database-create($config, "mlu-workshop-azure", 
+                  xdmp:database("Security"), xdmp:database("Schemas"))                
+return admin:save-configuration($config);
+
+xquery version "1.0-ml";
+import module namespace admin = "http://marklogic.com/xdmp/admin" 
+  at "/MarkLogic/admin.xqy";
+(: Get the configuration with the new forest and database :)
+let $config := admin:get-configuration()
+(: Attach the forest to the database :)
+let $config := admin:database-attach-forest(
+  $config,
+  xdmp:database("mlu-workshop-azure"), 
+  xdmp:forest("mlu-workshop-azure-Forest"))
+(: Save the configuration :)
+return admin:save-configuration($config);
+"Setup Successfully Created"</query><query name="Create content" focus="false" listorder="2" taborder="2" active="true" database="7525011248395402534" server="3469689428179267856" database-name="Documents" server-name="App-Services" mode="xquery">xquery version "1.0-ml";
+
+(: This must run against the mlu-workshop-azure database :)
+(: adds a specified number of policies into the database, based on a parameterised distribution :)
+(: These documents will be created randomly so outcomes will be different for each running :)
+
+declare variable $policy_per_country_COUNT := 10;
+declare variable $SURNAMES := ("Smith", "Jones", "Williams", "Taylor", "Brown", "Davies", "Evans");
+declare variable $FIRST_NAMES := ("James", "John", "Robert", "Mary", "Jennifer", "Elizabeth");
+declare variable $STREET := ("Broadway", "Regent", "Main", "Defence", "Command", "Conquer");
+declare variable $CURRENCIES := ("USD","GBP", "EUR");
+declare variable $PROPERTY := ("Home", "Commercial", "Industrial", "Auto","Vessel");
+declare variable $COUNTRY := ("US", "UK", "FR");
+
+
+declare function local:random-item($items as xs:string*)
+{
+  let $offset := xdmp:random(fn:count($items) - 1) + 1
+  return $items[$offset]
+};
+
+for $country in 1 to fn:count($COUNTRY)  
+  for $percountry in 1 to $policy_per_country_COUNT
+     let $policy-id := xdmp:random() + 1000
+     let $name as xs:string := local:random-item($FIRST_NAMES)||" "||local:random-item($SURNAMES)
+     let $address as xs:string := xdmp:random(100) ||" "|| local:random-item($STREET)
+     let $uuid := sem:uuid()
+     let $phone := fn:string-join((fn:string(xdmp:random(899) + 100), fn:string(xdmp:random(899) + 100), fn:string(xdmp:random(8999) + 1000)), "-")
+     let $propertytype as xs:string := local:random-item($PROPERTY)
+     
+     let $policy :=
+       &lt;policy&gt;
+          &lt;client-information&gt;
+            &lt;name&gt;{$name}&lt;/name&gt;
+            &lt;address&gt;{$address}&lt;/address&gt;
+            &lt;phone&gt;{$phone}&lt;/phone&gt;
+            &lt;country&gt;{$COUNTRY[$country]}&lt;/country&gt;
+          &lt;/client-information&gt;
+          &lt;policy-information&gt;
+            &lt;policyID&gt;{$policy-id}&lt;/policyID&gt;
+            &lt;property&gt;{$propertytype}&lt;/property&gt;
+            &lt;premium&gt;{xdmp:random(100000)}&lt;/premium&gt;
+            &lt;asset-value&gt;{xdmp:random(1000000)}&lt;/asset-value&gt;
+            &lt;currency&gt;{$CURRENCIES[$country]}&lt;/currency&gt;
+          &lt;/policy-information&gt;
+       &lt;/policy&gt;
+     
+     return xdmp:eval(xdmp:document-insert("/workshop/"||$COUNTRY[$country]||$percountry||".xml", $policy,    
+      &lt;options xmlns="xdmp:document-insert"&gt;  
+        
+        &lt;collections&gt;
+          &lt;collection&gt;{$COUNTRY[$country]}&lt;/collection&gt;
+          &lt;collection&gt;{$propertytype}&lt;/collection&gt;
+        &lt;/collections&gt;
+      &lt;/options&gt;),  
+      (),
+      &lt;options xmlns="xdmp:eval"&gt;
+		    &lt;database&gt;{xdmp:database("mlu-workshop-azure")}&lt;/database&gt;
+		  &lt;/options&gt;)
+</query></workspace></export>
