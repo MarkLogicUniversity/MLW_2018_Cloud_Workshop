@@ -39,7 +39,8 @@ The goal for this unit is to demonstrate how a data drive can be used even after
 ![](images/azure-unit3-00006.png)
 6. Click the **Create** button.
 7. Once the disk has been created, which may take a couple minutes, you will be returned to the list of disks for your virtual machine.  Click **Save** to update the VM configuration.
-   * ==NOTE: Wait for the update to complete before proceeding==
+
+> NOTE: Wait for the update to complete before proceeding
 
 <a name="initializeDataDisk"></a>
 ## Initialize the new Data Disk 
@@ -108,8 +109,9 @@ To make sure the drive is remounted after a reboot it needs to be added to the /
 3. Click the **+ Add data disk** button.
 4. From the *NAME* drop-down, select the `testDataDisk`. Note that this is only available now that the original node it was associated with has been deleted and is no longer using it.  
 ![](images/azure-unit3-00015.png)
-5. Click **Save** to update the VM configuration.
-   * ==NOTE: Wait for the update to complete before proceeding== 
+5. Click **Save** to update the VM configuration.  
+
+> NOTE: Wait for the update to complete before proceeding
 6. SSH into the new node.  If you get a *Host key verification failed* message, you can run `ssh-keygen -R hostname` to clear it.
 
 ### OPTION 1 - Single command ###
@@ -131,8 +133,10 @@ sudo mkdir /datadrive; sudo mount /dev/sdc1 /datadrive; sudo chmod go+w /datadri
 2. Once again, import the `MLU-workshop-Azure.xml` workspace.
 2. Select the *Set the stage* tab.  Notice that the forest is being created in the `/datadrive/` (which already has content there).
 3. Click the **Run** button.
-	* ==Do not run the *Create content* tab.  You should be reusing the content that was previously stored on the disk.==
-4. Refresh the query console.
+
+> NOTE: Do not run the *Create content* tab.  You should be reusing the content that was previously stored on the disk.
+
+5. Refresh the query console.
 5. Select the `mlu-workshop-azure` database and click the **Explore** button.  You should see 30 documents listed.
 
 <a name="summary"></a>
