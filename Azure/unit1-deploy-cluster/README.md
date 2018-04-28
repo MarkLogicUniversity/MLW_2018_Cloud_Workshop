@@ -5,7 +5,7 @@ In Unit 1, we will create a three node MarkLogic cluster using Solution Template
 It's simple to create a MarkLogic cluster in Microsoft Azure. But before you do, you should become familiar with the process. It's highly recommended to read through the [MarkLogic Server on Microsoft® Azure® Guide](http://docs.marklogic.com/guide/azure).
 
 
-##Table of Contents
+## Table of Contents
 
 1. [Process to Create a MarkLogic Cluster using Azure Solution Template](#process)
 2. [Launch your cluster using an Azure Solution Tempate](#launch)
