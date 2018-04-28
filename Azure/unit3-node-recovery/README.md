@@ -104,7 +104,7 @@ To make sure the drive is remounted after a reboot it needs to be added to the /
 1. Follow the steps in [Unit 2 - Creating the Node](../unit2-cluster-scale-up/README.md#toc_1) to create the mlNode4 virtual machine again, except set the *DNS name label* to be node4new.  For example, `jdwmlnode4new`. For our purposes there is no need to add the node back into the cluster.
 
 ### Attach the existing disk ###
-3. From the *Azure Dashboard* select **mlNode4**.
+1. From the *Azure Dashboard* select **mlNode4**.
 4. Under *Settings* click on *Disks*.
 3. Click the **+ Add data disk** button.
 4. From the *NAME* drop-down, select the `testDataDisk`. Note that this is only available now that the original node it was associated with has been deleted and is no longer using it.  
@@ -115,14 +115,14 @@ To make sure the drive is remounted after a reboot it needs to be added to the /
 6. SSH into the new node.  If you get a *Host key verification failed* message, you can run `ssh-keygen -R hostname` to clear it.
 
 ### OPTION 1 - Single command ###
-2. Run the following command, you should only be prompted for the password once:
+1. Run the following command, you should only be prompted for the password once:
 
 ~~~
 sudo mkdir /datadrive; sudo mount /dev/sdc1 /datadrive; sudo chmod go+w /datadrive
 ~~~
 
 ### OPTION 2 - Step by step ###
-7. First, we'll create a directory to mount the new files system to. `sudo mkdir /datadrive`
+1. First, we'll create a directory to mount the new files system to. `sudo mkdir /datadrive`
 9. At this point we can mount the drive to make use of it. `sudo mount /dev/sdc1 /datadrive`
 10. You can verify that the forest data is now availble on this vm. `ls /datadrive/Forests/`
 11. 10. With the drive mounted, now we can make it writable with `sudo chmod go+w /datadrive`.
