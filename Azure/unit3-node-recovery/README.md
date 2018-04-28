@@ -45,7 +45,7 @@ The goal for this unit is to demonstrate how a data drive can be used even after
 ## Initialize the new Data Disk 
 In order to use the new disk, the partition table has to be updated, the file system type has to be specified, and the partition mounted.  You can either run a single command line, or you can do it step-by-step.
 
-###OPTION 1 - Single command ###
+### OPTION 1 - Single command ###
 1. If needed, SSH into the virtual machine once again.
 2. Run the following command, you should only be prompted for the password once:
 
@@ -54,7 +54,7 @@ sudo parted /dev/sdc mklabel msdos -a optimal mkpart primary xfs 0% 100%; sudo m
 ~~~  
 ![](images/azure-unit3-00008.png)
 
-###OPTION 2 - Step by step ###
+### OPTION 2 - Step by step ###
 1. If needed, SSH into the virtual machine once again.
 2. Run the command `lsscsi` and compare that to what was listed last time.  The new drive is the one we added.  For example it may be `/dev/sdc`.  
 ![](images/azure-unit3-00007.png)
@@ -99,10 +99,10 @@ To make sure the drive is remounted after a reboot it needs to be added to the /
 
 > At this point the virtual machine called mlNode4 has been deleted.  But, the managed drive that we created *testDataDisk*, still exists and we want to use it again.
 
-###Create a new virtual machine###
+### Create a new virtual machine###
 1. Follow the steps in [Unit 2 - Creating the Node](../unit2-cluster-scale-up/README.md#toc_1) to create the mlNode4 virtual machine again, except set the *DNS name label* to be node4new.  For example, `jdwmlnode4new`. For our purposes there is no need to add the node back into the cluster.
 
-###Attach the existing disk###
+### Attach the existing disk###
 3. From the *Azure Dashboard* select **mlNode4**.
 4. Under *Settings* click on *Disks*.
 3. Click the **+ Add data disk** button.
@@ -112,21 +112,21 @@ To make sure the drive is remounted after a reboot it needs to be added to the /
    * ==NOTE: Wait for the update to complete before proceeding== 
 6. SSH into the new node.  If you get a *Host key verification failed* message, you can run `ssh-keygen -R hostname` to clear it.
 
-###OPTION 1 - Single command###
+### OPTION 1 - Single command###
 2. Run the following command, you should only be prompted for the password once:
 
 ~~~
 sudo mkdir /datadrive; sudo mount /dev/sdc1 /datadrive; sudo chmod go+w /datadrive
 ~~~
 
-###OPTION 2 - Step by step###
+### OPTION 2 - Step by step###
 7. First, we'll create a directory to mount the new files system to. `sudo mkdir /datadrive`
 9. At this point we can mount the drive to make use of it. `sudo mount /dev/sdc1 /datadrive`
 10. You can verify that the forest data is now availble on this vm. `ls /datadrive/Forests/`
 11. 10. With the drive mounted, now we can make it writable with `sudo chmod go+w /datadrive`.
 
 <a name="verifyDataDisk"></a>
-##Verify the content##
+## Verify the content##
 1. Use the full DNS name to bring up the query console on port 8000.
 2. Once again, import the `MLU-workshop-Azure.xml` workspace.
 2. Select the *Set the stage* tab.  Notice that the forest is being created in the `/datadrive/` (which already has content there).
