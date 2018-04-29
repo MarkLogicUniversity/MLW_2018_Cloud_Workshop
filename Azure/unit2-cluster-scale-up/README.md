@@ -1,5 +1,5 @@
 # Unit 2: Cluster Scale Up
-In this unit, we will explore how to add another node to an existing MarkLogic cluster. Realize that adding a single node to a three node cluster would not be ideal.  In reality, the cluster should be an odd number of nodes for purposes of high availability.
+In this unit, we will explore how to add another node to an existing MarkLogic cluster. Realize that adding a single node to a three-node cluster would not be ideal.  In reality, the cluster should be an odd number of nodes for purposes of high availability.  For more details see the [Scalability, Availability, and Failover Guide](http://docs.marklogic.com/guide/cluster).
 
 ## Table of Contents
 1. [Creating the Node](#creatingTheNode)
