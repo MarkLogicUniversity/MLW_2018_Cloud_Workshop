@@ -5,7 +5,6 @@ In this unit, we will explore how to add another node to an existing MarkLogic c
 1. [Creating the Node](#creatingTheNode)
 2. [Adding the Node to the Cluster](#addingNode)
 3. [Summary](#summary)
-4. [Quiz](#quiz)
 
 <a name="creatingTheNode"></a>
 ## Creating the Node
@@ -29,7 +28,7 @@ In this unit, we will explore how to add another node to an existing MarkLogic c
 	* Select **View all**
 16. Choose the **D4S_V3 Standard** configuration and click the **select** button.  
 ![](images/azure-unit2-00003.png)
-17. In the *Settings* panel, double check that the **Virtual network** is set to `developer-vnet` and change the **Network security group** to `developer-nsg`.  
+17. In the *Settings* panel, double check that the **Virtual network** is set to `RESOURCEGROUP-vnet` and change the **Network security group** to `RESOURCEGROUP-nsg`.  
 ![](images/azure-unit2-00004.png)  
 18. Click the **OK** button on the *Settings* panel.
 17. Verify that `MarkLogic Developer 9` is listed in the **Summary** pane and click the **Create** button.
@@ -38,7 +37,7 @@ In this unit, we will explore how to add another node to an existing MarkLogic c
 20. Set the **DNS name label** to your initials and mlNode3 to create a unique name.  For example `jdwmlnode4`.  
 ![](images/azure-unit2-00005.png)
 21. Click **Save** at the top to apply and save the new setting.
-22. Make a note of the **DNS name label** you used, and the rest of the path that is listed just below it.  For example `.eastus.cloudapp.azure.com`.
+22. Make a note of the **DNS name label** you used, and the rest of the path that is listed just below it.  For example `.westus.cloudapp.azure.com`.
 
 <a name="addingNode"></a>
 ## Adding the Node to the Cluster
@@ -61,6 +60,3 @@ In this unit, we will explore how to add another node to an existing MarkLogic c
 <a name="summary"></a>
 ## Summary
 Adding a node to a cluster on the Azure platform is little different from adding one in your local machine room.
-
-<a name="quiz"></a>
-## Quiz
