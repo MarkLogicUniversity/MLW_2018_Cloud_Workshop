@@ -65,10 +65,11 @@ Let's begin.
 4. Click the **Next** button.
 ![](images/stackParameters.png)
 5. Fill in the following information. <a name="step5"></a>
-	* Stack Name - a unique stack name across the account (example: use your full name)
+	* Stack Name - a unique stack name across the account (example: use your full name). Take a note of this stack name. You will need it later for tags.
 	* IAM Role - a previously created Identity and Access Management role name. Use the value provided.
 	* Volume Size - leave at the default of 10 GB.
 	* Volume Type - leave at the default.
+	* Instance Type - Use m3.medium for this exercise.
 	* Spot Price - leave blank.
 	* SSH Key Name - a previously created EC2 Key-Pair name.
 	* Number of Zones - leave at the default of 3.
