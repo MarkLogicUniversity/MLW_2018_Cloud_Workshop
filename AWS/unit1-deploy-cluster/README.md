@@ -4,7 +4,7 @@ Table of Contents:
 - [Unit 1 - Create the MarkLogic Cluster](#unit1)
 	- [Process to Create a MarkLogic Cluster using CloudFormation Templates](#process)
 	- [Enable a MarkLogic AMI](#ami)
-	- [Launch your cluster using a CloudFormation tempate.](#launch)
+	- [Launch your cluster using a CloudFormation template.](#launch)
 	- [Check the Status of the New Instance](#instance)
 	- [Check the Status of the New Cluster](#cluster)
 	- [Access the Cluster](#access)
@@ -55,7 +55,7 @@ Let's begin.
 8. You've now subscribed to the MarkLogic AMI and can proceed to use a CloudFormation template to create your running instance.
 
 <a name="launch"></a>
-### Launch your cluster using a CloudFormation tempate
+### Launch your cluster using a CloudFormation template
 
 1. Go to [CloudFormation page](https://us-west-2.console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks?filter=active) of AWS Web Console. (Log into the AWS Console, if needed.) You can change your region from the top right corner. For the purpose of this excercise, we are using US West 2.
 ![](images/cloudformation.png)
@@ -65,8 +65,8 @@ Let's begin.
 4. Click the **Next** button.
 ![](images/stackParameters.png)
 5. Fill in the following information. <a name="step5"></a>
-	* Stack Name - a unique stack name across the account (example: use last name as prefix)
-	* IAM Role - a previously created Identity and Access Management role name. 
+	* Stack Name - a unique stack name across the account (example: use your full name)
+	* IAM Role - a previously created Identity and Access Management role name. Use the value provided.
 	* Volume Size - leave at the default of 10 GB.
 	* Volume Type - leave at the default.
 	* Spot Price - leave blank.
