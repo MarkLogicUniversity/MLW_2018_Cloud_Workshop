@@ -91,7 +91,7 @@ Let's begin.
 8. On the **Review** page, scroll to the bottom and check the box "I acknowledge that AWS CloudFormation might create IAM resources with custom names". This is to authorize CloudFormation to create IAM role based on the permissions specified in the template. Then click the **Create** button.
 ![](images/ackIAM.png)
 9. You are returned to the **Create Stack** page while your CloudFormation stack is being created.
-10. After the stack is created, the page will refresh with the name of your completed stack.
+10. After the stack is created, the page will refresh with the name of your completed stack. You should expect to see "CREATE COMPLETE" of your stack.
 ![](images/createComplete.png)
 11. When the Scroll down until you see **Outputs** as the second tab. Click on the **Outputs** tab.
 12. The URL to access MarkLogic's Administrative Interface page on port 8001 is in the `Value` column. Copy this URL to use later.
