@@ -41,7 +41,7 @@ Before starting, make sure you have done the following.
 Let's begin.
 
 <a name="ami"></a>
-### Enable a MarkLogic AMI
+### Enable a MarkLogic AMI (ALREADY COMPLETED)
 
 1. Go to <https://aws.amazon.com/marketplace> .
 2. In the top search bar, leave the dropdown at the default setting of **AMI & SaaS** then enter the search term `marklogic`.
