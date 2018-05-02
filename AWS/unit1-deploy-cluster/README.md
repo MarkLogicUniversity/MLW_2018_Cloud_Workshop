@@ -66,16 +66,16 @@ Let's begin.
 4. Click the **Next** button.
 ![](images/stackParameters.png)
 5. Fill in the following information. <a name="step5"></a>
-	* Stack Name - a unique stack name across the account (example: your full name). Take a note of this stack name. You will need it later for tags.
-	* IAM Role - a previously created Identity and Access Management role name. Use the value provided.
+	* Stack Name - a **unique** stack name across the account (example: your full name). Take a note of this stack name. You will need it later for tags.
+	* IAM Role - a previously created Identity and Access Management role name. **Use the value provided**.
 	* Volume Size - leave at the default of 10 GB.
 	* Volume Type - leave at the default.
-	* Instance Type - Use m3.medium for this exercise.
+	* Instance Type - Use **m3.medium** for this exercise.
 	* Spot Price - leave at the default.
-	* SSH Key Name - a previously created EC2 Key-Pair name.
+	* SSH Key Name - a previously created EC2 Key-Pair name. **Use the value provided**.
 	* Number of Zones - leave at the default of 3.
 	* Nodes Per Zone - total number of nodes per Zone. Leave this at 1 to create a simple 3-node cluster.
-	* Availability Zone - select "us-west-2a", "us-west-2b" and "us-west-2c" from dropdown menu.
+	* Availability Zone - select **us-west-2a**, **us-west-2b** and **us-west-2c** from dropdown menu.
 	* Instance Public IP - leave at the default of disable.
 	* Logging SNS ARN - optional. Leave at the default value.
 	* VPC CIDR - leave at the default value.
@@ -143,13 +143,13 @@ Once you go through the basic flow of deploying a cluster, you can also customiz
 
 - Use the CloudFormation template that deploys cluster into **existing VPC**. Copy and paste the URL to the `mlcluster.template` provided. ([Step 3 of Launching](#step3))
 - Fill in the following parameters. ([Step 5 of Launching](#step5))
-	* Stack Name - a unique stack name across the account (example: your full name). Take a note of this stack name. You will need it later for tags.
-	* IAM Role - a previously created Identity and Access Management role name. Use the value provided.
+	* Stack Name - a **unique** stack name across the account (example: your full name). Take a note of this stack name. You will need it later for tags.
+	* IAM Role - a previously created Identity and Access Management role name. **Use the value provided**.
 	* Volume Size - leave at the default of 10 GB.
 	* Volume Type - leave at the default.
-	* Instance Type - Use m3.medium for this exercise.
+	* Instance Type - Use **m3.medium** for this exercise.
 	* Spot Price - leave at the default.
-	* SSH Key Name - a previously created EC2 Key-Pair name.
+	* SSH Key Name - a previously created EC2 Key-Pair name. **Use the value provided**.
 	* **Number of Zones - Set to 1. Deploy to only 1 availability zone.**
 	* Nodes Per Zone - total number of nodes per Zone. Leave this at 1 to create a simple 3-node cluster.
 	* **Availability Zone - select "us-west-2a" from dropdown menu.**
@@ -161,6 +161,5 @@ Once you go through the basic flow of deploying a cluster, you can also customiz
 	* Admin Password - the MarkLogic administrator user password. The user and password will be created when the cluster is created. We will use `MarkLogicWorld_2018` as the password.
 	* Licensee - leave at the default value "none" to use the included Developer's License.
 	* LicenseKey - leave at the default value "none"
-- Follow [Step 6 of Launch](#step6) and subsequent steps to finish deployment.
 
 Now you should see a new one node cluster is coming up!
