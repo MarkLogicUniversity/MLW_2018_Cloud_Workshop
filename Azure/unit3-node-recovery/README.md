@@ -12,7 +12,6 @@ The goal for this unit is to demonstrate how a data drive can be used even after
 5. [Reuse the Data Disk](#reuseDataDisk)
 6. [Verify the Content](#verifyDataDisk)
 7. [Summary](#summary)
-8. [Quiz](#quiz)
 
 <a name="viewExistingList"></a>
 ## View Existing Disk List
@@ -101,7 +100,7 @@ To make sure the drive is remounted after a reboot it needs to be added to the /
 > At this point the virtual machine called mlNode4 has been deleted.  But, the managed drive that we created *testDataDisk*, still exists and we want to use it again.
 
 ### Create a new virtual machine ###
-1. Follow the steps in [Unit 2 - Creating the Node](../unit2-cluster-scale-up/README.md#toc_1) to create the mlNode4 virtual machine again, except set the *DNS name label* to be node4new.  For example, `jdwmlnode4new`. For our purposes there is no need to add the node back into the cluster.
+1. Follow the steps in [Unit 2 - Creating the Node](../unit2-cluster-scale-up/README.md#toc_1) to create the mlNode4 virtual machine again, except set the *DNS name label* to be node4new.  For example, `jdwmlnode4new`.
 
 ### Attach the existing disk ###
 1. From the *Azure Dashboard* select **mlNode4**.
@@ -142,6 +141,3 @@ sudo mkdir /datadrive; sudo mount /dev/sdc1 /datadrive; sudo chmod go+w /datadri
 <a name="summary"></a>
 ## Summary
 By establishing our forests on a separate data disk, we can isolate them from the rest of the VM and still potentially make use of them if a VM goes down or is removed.
-
-<a name="quiz"></a>
-## Quiz

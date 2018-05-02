@@ -1,21 +1,21 @@
 # Unit 1: Create the MarkLogic Cluster
 
-In Unit 1, we will create a three node MarkLogic cluster using Solution Templates on Microsoft Azure. For our purposes, a *node* is an Azure VM instance running MarkLogic. A *cluster* is one or more MarkLogic nodes working together.
+In Unit 1, we will create a three node MarkLogic cluster using Solution Templates on Microsoft Azure. For our purposes, a node is an Azure VM instance running MarkLogic. A *cluster* is one or more MarkLogic nodes working together.
 
-It's simple to create a MarkLogic cluster in Microsoft Azure. But before you do, you should become familiar with the process. It's highly recommended to read through the [MarkLogic Server on Microsoft® Azure® Guide](http://docs.marklogic.com/guide/azure).
+It's easy to create a MarkLogic cluster in Microsoft Azure. But before you do, you should become familiar with the process. It's highly recommended to read through the [MarkLogic Server on Microsoft® Azure® Guide](http://docs.marklogic.com/guide/azure).
 
 
 ## Table of Contents
 
-1. [Process to Create a MarkLogic Cluster using Azure Solution Template](#process)
-2. [Launch your cluster using an Azure Solution Tempate](#launch)
-3. [Check the Status of the New Cluster](#cluster)
-4. [Access the Cluster](#access)
-5. [Optional Exercise](#optional)
+- [Process to Create a MarkLogic Cluster using Azure Solution Template](#process)
+- [Launch your cluster using an Azure Solution Tempate](#launch)
+- [Check the Status of the New Cluster](#cluster)
+- [Access the Cluster](#access)
+- [Optional Exercise](#optional)
 
 
 <a name="process"></a>
-## Preparation
+## Preparation (ALREADY COMPLETED)
 
 Before starting, make sure you have done the following:  
 
@@ -41,8 +41,8 @@ Let's begin.
 	* **Deployment name** - a unique string that will be used as the resources' prefix. Example: `mlwdemo`
 	* **Number of Nodes** - leave at the default of `3` nodes
 	* **Subscription** - select a subscription which the running resources will be billed to
-	* **Resource group** - `Use existing` and select a resource group from the dropdown menu.  If the list is empty, set it to `Create new` and enter a value such as `developer`.
-	* **Location** - You can change the region from the dropdown. For this exercise, we will use West US.
+	* **Resource group** - `Use existing` and select a resource group from the dropdown menu.
+	* **Location** - You can change the region from the dropdown. For this exercise, we will use `West US`.
 ![](images/basicConfig.png)
 7. Then click the **OK** to move on to next step.
 7. In the *MarkLogic Configuration* page, fill in the following information:<a name="step8"></a>
@@ -61,7 +61,7 @@ Let's begin.
 	* **Storage: OS Storage** - Select `premium` for this exercise
 	* **Storage: Data Storage** - Select `premium` for this exercise
 	* **Virtual machine: Username** -  `mlwdamin`
-	* **Virtual machine: SSH public key** - ==TBD==
+	* **Virtual machine: SSH public key** - Use the value provided.
 ![](images/resourceConfig.png)
 9. Still on the *Resource Configuration* page, click the **Instance Type** control to pop up the *Instance Size Selector*. Select a size for VM instance. For this exercise, we will use default value `3x Standard DS13 v2`. Click the **Select** button. 
 ![](images/sizeSelector.png)
@@ -90,7 +90,7 @@ Let's begin.
 3. Select the load balancer's public IPv4 address from the resource list. In this exercise, it is called "mlwdemo-lbIp-v4".
 4. From the *Public IP address* view, copy the **DNS Name** value. We will use this address to access the cluster.
 ![](images/lbip.png)
-5. Open another tab in the browser and go to the port 80001 of the above address. For example `developer-qoyhgz6npg2zg-lb.westus.cloudapp.azure.com:8001`.
+5. Open another tab in the browser and go to the port 8001 of the above address. For example `developer-qoyhgz6npg2zg-lb.westus.cloudapp.azure.com:8001`.
 6. Enter the Admin user name and password set for the cluster when we specified the [deployment configuration](#step8).
 6. You will see MarkLogic administration interface show up.
 ![](images/adminGui.png)
