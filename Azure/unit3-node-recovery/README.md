@@ -1,6 +1,6 @@
 # Unit 3: Cluster Recovery (Optional)
 
-For this optional Unit, we will be needing to SSH into our virtual machines.  If you are running *nix of some flavor or MacOS, you already have SSH available in your terminal.  Otherwise, you may need to obtain an SSH utility such as [putty](https://www.putty.org/).  There are also browser plugins, and even [thin clients](https://tools.bartlweb.net/webssh/) available.
+For this optional unit, we will be needing to SSH into our virtual machines.  If you are running *nix of some flavor or MacOS, you already have SSH available in your terminal.  Otherwise, you may need to obtain an SSH utility such as [putty](https://www.putty.org/).  There are also browser plugins, and even [thin clients](https://tools.bartlweb.net/webssh/) available.
 
 The goal for this unit is to demonstrate how a data drive can be used even after the originating node is unavailable.
 
@@ -19,7 +19,7 @@ The goal for this unit is to demonstrate how a data drive can be used even after
 ![](images/azure-unit3-00001.png)
 2. Copy the **DNS name** to the clipboard using the button that appears to the right of the **DNS name** when you hover over it.  
 ![](images/azure-unit3-00002.png)
-3. Now, use that DNS name to SSH into the machine, using the credentials we created in Unit 2.  For example, `ssh mlwadmin@jdwmlnode3.westus.cloudapp.azure.com`
+3. Now, use that DNS name to SSH into the machine, using the credentials we created in Unit 2.  For example, `ssh mlwadmin@jdwmlnode4.westus.cloudapp.azure.com`
 4. Run the command `lsscsi` and make note of the current drives available.  
 ![](images/azure-unit3-00003.png) 
 5. Leave the terminal open.
@@ -33,8 +33,8 @@ The goal for this unit is to demonstrate how a data drive can be used even after
 4. From the *NAME* drop-down, select `Create disk`.  
 ![](images/azure-unit3-00005.png)
 5. In the *Create managed disk* panel enter the following details:
-	* Name - testDataDisk
-	* Resource group - Use existing, selecting what was specified in Unit 1.  
+	* **Name** - `testDataDisk`
+	* **Resource group** - `Use existing`, selecting what was specified in Unit 1.  
 ![](images/azure-unit3-00006.png)
 6. Click the **Create** button.
 7. Once the disk has been created, which may take a couple minutes, you will be returned to the list of disks for your virtual machine.  Click **Save** to update the VM configuration.
