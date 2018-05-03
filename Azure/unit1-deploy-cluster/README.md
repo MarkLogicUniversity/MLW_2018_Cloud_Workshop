@@ -55,7 +55,7 @@ Let's begin.
 <a name="step8"></a>
 8. Then click the **OK** button to move on to next step.
 8. <a name="step10"></a> In the *Resource Configuration* page, fill in the following information:
-	* **MarkLogic High Availability**[^1] - leave at the default of `enable`
+	* **MarkLogic High Availability** - leave at the default of `enable` (This feature only provides high availability for the resources created as part of the normal initialization of MarkLogic.  You would be responsible for configuring any new databases and forests.  Please refer to the [Scalability, Availability, and Failover Guide](http://docs.marklogic.com/guide/cluster) for more details.)
 	* **Load Balancer: Type** - leave at the default of `public`
 	* **Load Balancer: IPv6** - leave at the default of `enable`
 	* **Storage: OS Storage** - Select `premium` for this exercise
@@ -70,8 +70,6 @@ Let's begin.
 ![](images/summary.png)
 11. On the *Buy* page, scroll down to bottom and click the **Create** button to accept the terms and deploy the stack.
 ![](images/create.png)
-
-[^1]: This feature only provides high availability for the resources created as part of the normal initialization of MarkLogic.  You would be responsible for configuring any new databases and forests.  Please refer to the [Scalability, Availability, and Failover Guide](http://docs.marklogic.com/guide/cluster) for more details.
 
 <a name="cluster"></a>
 ## Check the Status of the New Cluster
