@@ -1,14 +1,14 @@
 # Hands-on MarkLogic in the Cloud Workshop (AWS) Unit 1
 
-Table of Contents:
-- [Unit 1 - Create the MarkLogic Cluster](#unit1)
-	- [Process to Create a MarkLogic Cluster using CloudFormation Templates](#process)
-	- [Enable a MarkLogic AMI](#ami)
-	- [Launch your cluster using a CloudFormation template.](#launch)
-	- [Check the Status of the New Instance](#instance)
-	- [Check the Status of the New Cluster](#cluster)
-	- [Access the Cluster](#access)
-	- [Optional Exercise](#optional)
+Table of Contents:  
+- [Unit 1 - Create the MarkLogic Cluster](#unit1)  
+- [Process to Create a MarkLogic Cluster using CloudFormation Templates](#process)  
+- [Enable a MarkLogic AMI](#ami)  
+- [Launch your cluster using a CloudFormation template.](#launch)  
+- [Check the Status of the New Instance](#instance)  
+- [Check the Status of the New Cluster](#cluster)  
+- [Access the Cluster](#access)  
+- [Optional Exercise](#optional)  
 
 <a name="unit1"></a>
 ## Unit 1 - Create the MarkLogic Cluster
