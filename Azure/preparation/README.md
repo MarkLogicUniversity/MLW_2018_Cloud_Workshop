@@ -10,8 +10,9 @@ Also, make sure you have done the following:
 [Create and share dashboards in the Azure portal.](https://docs.microsoft.com/en-us/azure/azure-portal/azure-portal-dashboards)
 * Create an account subscription that running resources can be billed to.
 * Ensure you have [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) if you are using Windows.  MacOS and other \*nix users already have SSH in their terminal.
-* Locate or create your public SSH key.  See the following sections for more details.
+* An SSH key is required for this workshop.  A placeholder one will be supplied, but outside of the workshop you would need to have your own generated. See the following sections for more details.
 
+# Creating a public SSH key (OPTIONAL)
 ## Creating a public SSH key (on Windows)
 To create the public SSH key on Windows, we are going to assume that you have already installed the [Putty suite](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) which includes the *PuTTYgen* utility.
 

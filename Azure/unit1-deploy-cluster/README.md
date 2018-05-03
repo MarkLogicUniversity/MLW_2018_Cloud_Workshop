@@ -55,21 +55,23 @@ Let's begin.
 <a name="step8"></a>
 8. Then click the **OK** button to move on to next step.
 8. <a name="step10"></a> In the *Resource Configuration* page, fill in the following information:
-	* **MarkLogic High Availability** - leave at the default of `enable`
+	* **MarkLogic High Availability**[^1] - leave at the default of `enable`
 	* **Load Balancer: Type** - leave at the default of `public`
 	* **Load Balancer: IPv6** - leave at the default of `enable`
 	* **Storage: OS Storage** - Select `premium` for this exercise
 	* **Storage: Data Storage** - Select `premium` for this exercise
-	* **Virtual machine: Username** -  `mlwdamin`
-	* **Virtual machine: SSH public key** - Use the value provided.
+	* **Virtual machine: Username** -  `mlwadmin`
+	* **Virtual machine: SSH public key** - Use the value provided by your instructor.
 ![](images/resourceConfig.png)
-9. Still on the *Resource Configuration* page, click the **Instance Type** control to pop up the *Instance Size Selector*. Select a size for VM instance. For this exercise, we will use default value `3x Standard DS13 v2`. Click the **Select** button. 
+9. Still on the *Resource Configuration* page, click the **Instance Type** control to pop up the *Choose a size* page. Select a size for VM instance. For this exercise, we will use default value `DS1 v2`. Please note we are choosing this option as this we will not be doing any processing.  For more details on installation requirements, please refer to the [Installation Guide](http://docs.marklogic.com/guide/installation).  Click the **Select** button. 
 ![](images/sizeSelector.png)
 10. Click the **OK** button on the *Resource Configuration* page.
-10. The *Summary* of the cluster configuration will show. Click the **OK** button to confirm. If you want to modify some settings, click the corresponding tab to the left (*Basics*, *MarkLogic Configuration*, *Resource Configuration*) to go back.
+10. The *Summary* of the cluster configuration will show. If you want to modify some settings, click the corresponding tab to the left (*Basics*, *MarkLogic Configuration*, *Resource Configuration*) to go back. Click the **OK** button to confirm. 
 ![](images/summary.png)
 11. On the *Buy* page, scroll down to bottom and click the **Create** button to accept the terms and deploy the stack.
 ![](images/create.png)
+
+[^1]: This feature only provides high availability for the resources created as part of the normal initialization of MarkLogic.  You would be responsible for configuring any new databases and forests.  Please refer to the [Scalability, Availability, and Failover Guide](http://docs.marklogic.com/guide/cluster) for more details.
 
 <a name="cluster"></a>
 ## Check the Status of the New Cluster
@@ -77,7 +79,7 @@ Let's begin.
 > Note: It takes approximately 10 to 15 minutes for the created instances to start up and to initialize the MarkLogic Servers.
 
 1. Go to *Resource Groups* by click on the **Resource Groups** button on the left tab bar.
-2. Select the resource group we just created.
+2. Select the resource group we used while [launching the cluster](#step6).
 3. From the *Resource group* view, we will see the deployment status and a list of successfully created resources.
 ![](images/resourceGroup.png)
 4. Once it shows all deployments are finished and successful, the cluster is ready to use.
@@ -85,14 +87,14 @@ Let's begin.
 <a name="access"></a>
 ## Access the Cluster
 
-1. Go to *Resource Groups* by click on the **Resource Groups** button on the left tab bar.
+1. Go to *Resource Groups* by click on the **Resource groups** button on the left tab bar.
 2. Select the resource group we just created.
-3. Select the load balancer's public IPv4 address from the resource list. In this exercise, it is called "mlwdemo-lbIp-v4".
+3. Click on the load balancer's public IPv4 address from the resource list. For example, it could be `mlwdemo-lbIp-v4`.
 4. From the *Public IP address* view, copy the **DNS Name** value. We will use this address to access the cluster.
 ![](images/lbip.png)
-5. Open another tab in the browser and go to the port 8001 of the above address. For example `developer-qoyhgz6npg2zg-lb.westus.cloudapp.azure.com:8001`.
+5. Open another tab in the browser and go to the port 8001 of the above address. For example `mlwdemo-kgqgheejj3564-lb.westus.cloudapp.azure.com:8001`.
 6. Enter the Admin user name and password set for the cluster when we specified the [deployment configuration](#step8).
-6. You will see MarkLogic administration interface show up.
+6. You will see the MarkLogic *Admin Interface* show up.
 ![](images/adminGui.png)
 
 <a name="optional"></a>
@@ -101,7 +103,7 @@ Let's begin.
 Once you go through the basic flow of deploying a cluster, you can also try to customize the cluster by using different deployment options.
 
 - In [Step 6 of Launch](#step6), select **1** node to be deployed as a cluster.
-- In [Step 8 of Launch](#step8), you only need to configure fewer parameters for the single node cluster.
+- In [Step 8 of Launch](#step8), there are fewer parameters to configure for the single node cluster.
 - Follow [Step 10 of Launch](#step10) and subsequent steps to finish deployment.
 
 Now you should see a new one node cluster is coming up!
