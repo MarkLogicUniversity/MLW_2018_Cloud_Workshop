@@ -137,7 +137,7 @@ If you need to copy the URL again:
 * Click the **Outputs** tab below the list of CloudFormation stacks for the URL.
 
 <a name="optional"></a>
-### Optional Excercise
+### Optional Exercise
 
 Once you go through the basic flow of deploying a cluster, you can also customize the cluster by using different deployment type.
 
